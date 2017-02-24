@@ -1,0 +1,56 @@
+{
+  "name": "clay-driver-localstorage",
+  "version": "1.0.0",
+  "description": "LocalStoarge driver for ClayDB",
+  "main": "lib",
+  "browser": "ci/browser",
+  "scripts": {
+    "test": "node ./ci/test.js",
+    "prepare": "node ./ci/build.js && node ./ci/shim.js && node ./ci/doc.js"
+  },
+  "repository": "realglobe-Inc/clay-driver-localstorage",
+  "keywords": [
+    "ClayDB"
+  ],
+  "author": {
+    "name": "Taka Okunishi",
+    "email": "okunishinishi@gmail.com",
+    "url": "http://okunishitaka.com"
+  },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/realglobe-Inc/clay-driver-localstorage/issues"
+  },
+  "homepage": "https://github.com/realglobe-Inc/clay-driver-localstorage#readme",
+  "dependencies": {
+    "bwindow": "^1.0.7",
+    "co": "^4.6.0",
+    "asleep": "^1.0.3",
+    "clay-driver-memory": "^2.1.3",
+    "clay-serial": "^1.1.1"
+  },
+  "devDependencies": {
+    "ababel": "^2.0.1",
+    "ababel-es2015": "^2.0.1",
+    "amocha": "^2.0.0",
+    "ape-formatting": "^1.0.2",
+    "ape-releasing": "^4.0.4",
+    "ape-tasking": "^4.0.9",
+    "ape-tmpl": "^5.0.20",
+    "ape-updating": "^4.1.0",
+    "clay-driver-tests": "^1.1.1",
+    "coz": "^6.0.20",
+    "injectmock": "^2.0.0",
+    "request": "^2.79.0",
+    "sg-templates": "^1.3.2",
+    "stringcase": "^3.2.1",
+    "sugos-travis": "^2.0.7"
+  },
+  "engines": {
+    "node": ">=6",
+    "npm": ">=4"
+  },
+  "publishConfig": {
+    "registry": "https://realglobe.artifactoryonline.com/realglobe/api/npm/npm-local"
+  }
+}
