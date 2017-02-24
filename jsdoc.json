@@ -34,7 +34,7 @@
       "fires": "",
       "constructor": {
         "name": "LocalStorageDriver",
-        "description": "Driver to store data into json files",
+        "description": "Driver to store data into local storages",
         "parameters": [
           {
             "name": "dirname",
@@ -48,8 +48,16 @@
             "name": "options",
             "type": "Object",
             "description": "Optional settings",
+            "default": "{}",
+            "optional": true,
+            "nullable": ""
+          },
+          {
+            "name": "options.prefix",
+            "type": "string",
+            "description": "Prefix of key in local storage",
             "default": "",
-            "optional": "",
+            "optional": true,
             "nullable": ""
           }
         ],
