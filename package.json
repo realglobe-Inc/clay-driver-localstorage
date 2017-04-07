@@ -1,7 +1,7 @@
 {
   "name": "clay-driver-localstorage",
-  "version": "1.0.2",
-  "description": "LocalStoarge driver for ClayDB",
+  "version": "2.0.0",
+  "description": "LocalStorage driver for ClayDB",
   "main": "lib",
   "browser": "ci/browser",
   "scripts": {
@@ -23,11 +23,11 @@
   },
   "homepage": "https://github.com/realglobe-Inc/clay-driver-localstorage#readme",
   "dependencies": {
-    "bwindow": "^1.0.7",
-    "co": "^4.6.0",
     "asleep": "^1.0.3",
-    "clay-driver-memory": "^2.1.3",
-    "clay-serial": "^1.1.1"
+    "bwindow": "^1.0.7",
+    "clay-driver-memory": "^4.0.1",
+    "clay-serial": "^2.0.1",
+    "co": "^4.6.0"
   },
   "devDependencies": {
     "ababel": "^2.0.1",
@@ -38,7 +38,7 @@
     "ape-tasking": "^4.0.9",
     "ape-tmpl": "^5.0.20",
     "ape-updating": "^4.1.0",
-    "clay-driver-tests": "^1.1.1",
+    "clay-driver-tests": "^2.0.1",
     "coz": "^6.0.20",
     "injectmock": "^2.0.0",
     "request": "^2.79.0",
@@ -49,8 +49,5 @@
   "engines": {
     "node": ">=6",
     "npm": ">=4"
-  },
-  "publishConfig": {
-    "registry": "https://realglobe.artifactoryonline.com/realglobe/api/npm/npm-local"
   }
 }
