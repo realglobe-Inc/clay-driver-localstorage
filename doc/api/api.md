@@ -1,19 +1,21 @@
-# clay-driver-localstorage@1.0.1
+# clay-driver-localstorage@2.0.0
 
-LocalStoarge driver for ClayDB
+LocalStorage driver for ClayDB
 
 + Functions
   + [create(args)](#clay-driver-localstorage-function-create)
-+ [`LocalStorageDriver`](#clay-driver-localstorage-classes) Class
-  + [new LocalStorageDriver(dirname, options)](#clay-driver-localstorage-classes-local-storage-driver-constructor)
-  + [driver.getStorage()](#clay-driver-localstorage-classes-local-storage-driver-getStorage)
-  + [driver.delStorage()](#clay-driver-localstorage-classes-local-storage-driver-delStorage)
-  + [driver.drop()](#clay-driver-localstorage-classes-local-storage-driver-drop)
-  + [driver.one(namespace, id)](#clay-driver-localstorage-classes-local-storage-driver-one)
-  + [driver.list(namespace, condition)](#clay-driver-localstorage-classes-local-storage-driver-list)
-  + [driver.create(namespace, attributes)](#clay-driver-localstorage-classes-local-storage-driver-create)
-  + [driver.update(namespace, id, attributes)](#clay-driver-localstorage-classes-local-storage-driver-update)
-  + [driver.destroy(namespace, id)](#clay-driver-localstorage-classes-local-storage-driver-destroy)
++ [`LocalStorageDriver`](#clay-driver-localstorage-class) Class
+  + [new LocalStorageDriver(dirname, options)](#clay-driver-localstorage-class-local-storage-driver-constructor)
+  + [driver.getStorage()](#clay-driver-localstorage-class-local-storage-driver-getStorage)
+  + [driver.delStorage()](#clay-driver-localstorage-class-local-storage-driver-delStorage)
+  + [driver.drop()](#clay-driver-localstorage-class-local-storage-driver-drop)
+  + [driver.one(resourceName, id)](#clay-driver-localstorage-class-local-storage-driver-one)
+  + [driver.list(resourceName, condition)](#clay-driver-localstorage-class-local-storage-driver-list)
+  + [driver.create(resourceName, attributes)](#clay-driver-localstorage-class-local-storage-driver-create)
+  + [driver.update(resourceName, id, attributes)](#clay-driver-localstorage-class-local-storage-driver-update)
+  + [driver.destroy(resourceName, id)](#clay-driver-localstorage-class-local-storage-driver-destroy)
+  + [driver.drop(resourceName)](#clay-driver-localstorage-class-local-storage-driver-drop)
+  + [driver.resources()](#clay-driver-localstorage-class-local-storage-driver-resources)
 
 ## Functions
 
@@ -29,19 +31,19 @@ Create a driver instance
 
 
 
-<a class='md-heading-link' name="clay-driver-localstorage-classes"></a>
+<a class='md-heading-link' name="clay-driver-localstorage-class"></a>
 
 ## `LocalStorageDriver` Class
 
 Driver to store data into local storages
 
-**Extends**: 
+**Extends**:
 
 + `Driver`
 
 
 
-<a class='md-heading-link' name="clay-driver-localstorage-classes-local-storage-driver-constructor" ></a>
+<a class='md-heading-link' name="clay-driver-localstorage-class-local-storage-driver-constructor" ></a>
 
 ### new LocalStorageDriver(dirname, options)
 
@@ -54,84 +56,101 @@ Constructor of LocalStorageDriver class
 | options.prefix | string | Prefix of key in local storage |
 
 
-<a class='md-heading-link' name="clay-driver-localstorage-classes-local-storage-driver-getStorage" ></a>
+<a class='md-heading-link' name="clay-driver-localstorage-class-local-storage-driver-getStorage" ></a>
 
 ### driver.getStorage()
 
 
 
-<a class='md-heading-link' name="clay-driver-localstorage-classes-local-storage-driver-delStorage" ></a>
+<a class='md-heading-link' name="clay-driver-localstorage-class-local-storage-driver-delStorage" ></a>
 
 ### driver.delStorage()
 
 
 
-<a class='md-heading-link' name="clay-driver-localstorage-classes-local-storage-driver-drop" ></a>
+<a class='md-heading-link' name="clay-driver-localstorage-class-local-storage-driver-drop" ></a>
 
 ### driver.drop()
 
 
 
-<a class='md-heading-link' name="clay-driver-localstorage-classes-local-storage-driver-one" ></a>
+<a class='md-heading-link' name="clay-driver-localstorage-class-local-storage-driver-one" ></a>
 
-### driver.one(namespace, id) -> `Promise.<ClayEntity>`
+### driver.one(resourceName, id) -> `Promise.<ClayEntity>`
 
-Get single resource from namespace
+Get single entity from resource
 
 | Param | Type | Description |
 | ----- | --- | -------- |
-| namespace | string | Namespace to work with |
+| resourceName | string | Name of resource |
 | id | ClayId | Resource id |
 
 
-<a class='md-heading-link' name="clay-driver-localstorage-classes-local-storage-driver-list" ></a>
+<a class='md-heading-link' name="clay-driver-localstorage-class-local-storage-driver-list" ></a>
 
-### driver.list(namespace, condition) -> `Promise.<ClayCollection>`
+### driver.list(resourceName, condition) -> `Promise.<ClayCollection>`
 
-List resource in namespace
+List entities from resource
 
 | Param | Type | Description |
 | ----- | --- | -------- |
-| namespace | string | Namespace to work with |
+| resourceName | string | Name of resource |
 | condition | ListCondition | List condition query |
 
 
-<a class='md-heading-link' name="clay-driver-localstorage-classes-local-storage-driver-create" ></a>
+<a class='md-heading-link' name="clay-driver-localstorage-class-local-storage-driver-create" ></a>
 
-### driver.create(namespace, attributes) -> `Promise.<ClayEntity>`
+### driver.create(resourceName, attributes) -> `Promise.<ClayEntity>`
 
-Create data with namespace
+Create a new entity with resource
 
 | Param | Type | Description |
 | ----- | --- | -------- |
-| namespace | string | Namepath string |
+| resourceName | string | Name of resource |
 | attributes | Object | Resource attributes to create |
 
 
-<a class='md-heading-link' name="clay-driver-localstorage-classes-local-storage-driver-update" ></a>
+<a class='md-heading-link' name="clay-driver-localstorage-class-local-storage-driver-update" ></a>
 
-### driver.update(namespace, id, attributes) -> `Promise.<ClayEntity>`
+### driver.update(resourceName, id, attributes) -> `Promise.<ClayEntity>`
 
-Update data with namespace
+Update an existing entity in resource
 
 | Param | Type | Description |
 | ----- | --- | -------- |
-| namespace | string | Namepath string |
+| resourceName | string | Name of resource |
 | id | ClayId | Resource id |
 | attributes | Object | Resource attributes to update |
 
 
-<a class='md-heading-link' name="clay-driver-localstorage-classes-local-storage-driver-destroy" ></a>
+<a class='md-heading-link' name="clay-driver-localstorage-class-local-storage-driver-destroy" ></a>
 
-### driver.destroy(namespace, id) -> `Promise.<number>`
+### driver.destroy(resourceName, id) -> `Promise.<number>`
 
-Delete data with namespace
+Delete a entity resource
 
 | Param | Type | Description |
 | ----- | --- | -------- |
-| namespace | string | Namepath string |
+| resourceName | string | Name of resource |
 | id | ClayId | Resource id |
 
+
+<a class='md-heading-link' name="clay-driver-localstorage-class-local-storage-driver-drop" ></a>
+
+### driver.drop(resourceName) -> `Promise.<boolean>`
+
+Drop resource
+
+| Param | Type | Description |
+| ----- | --- | -------- |
+| resourceName | string | Name of resource |
+
+
+<a class='md-heading-link' name="clay-driver-localstorage-class-local-storage-driver-resources" ></a>
+
+### driver.resources() -> `Promise.<Resource>`
+
+List resources
 
 
 
