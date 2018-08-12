@@ -96,7 +96,7 @@ const LocalStorageDriver = require('clay-driver-localstorage')
 API
 ---------
 
-# clay-driver-localstorage@2.0.1
+# clay-driver-localstorage@2.0.2
 
 LocalStorage driver for ClayDB
 
