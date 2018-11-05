@@ -1,4 +1,4 @@
-# clay-driver-localstorage@2.0.2
+# clay-driver-localstorage@2.0.3
 
 LocalStorage driver for ClayDB
 
