@@ -1,6 +1,6 @@
 {
   "name": "clay-driver-localstorage",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "LocalStorage driver for ClayDB",
   "main": "lib",
   "browser": "ci/browser",
